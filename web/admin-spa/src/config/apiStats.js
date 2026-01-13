@@ -69,7 +69,7 @@ class ApiStatsClient {
       return {
         success: true,
         data: {
-          siteName: 'Claude Relay Service',
+          siteName: 'claude-relay-service',
           siteIcon: '',
           siteIconData: ''
         }
