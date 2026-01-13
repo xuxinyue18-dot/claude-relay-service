@@ -1,0 +1,26 @@
+services:
+  # Override: do not expose CRS directly when using Caddy
+  claude-relay:
+    ports: []
+
+  # HTTPS reverse proxy (requires a domain with DNS pointed to this server)
+  caddy:
+    image: caddy:2-alpine
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      - CRS_DOMAIN=${CRS_DOMAIN:?set CRS_DOMAIN in .env (e.g. relay.example.com)}
+    volumes:
+      - ./deploy/Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    depends_on:
+      - claude-relay
+    networks:
+      - claude-relay-network
+
+volumes:
+  caddy_data:
+  caddy_config:

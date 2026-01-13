@@ -1,0 +1,25 @@
+:root {
+  /* Base tokens (full theme lives in global.css) */
+  --primary-rgb: 0 163 255; /* electric blue */
+  --secondary-rgb: 168 85 247; /* violet */
+  --accent-rgb: 0 229 255; /* neon cyan */
+  --accent2-rgb: 255 43 214; /* neon magenta */
+
+  --success-rgb: 0 245 160; /* neon green */
+  --warning-rgb: 255 184 0; /* amber */
+  --error-rgb: 255 71 107; /* hot red */
+
+  --primary-color: rgb(var(--primary-rgb));
+  --secondary-color: rgb(var(--secondary-rgb));
+  --accent-color: rgb(var(--accent-rgb));
+  --success-color: rgb(var(--success-rgb));
+  --warning-color: rgb(var(--warning-rgb));
+  --error-color: rgb(var(--error-rgb));
+
+  --surface-color: rgba(255, 255, 255, 0.92);
+  --glass-color: rgba(255, 255, 255, 0.08);
+
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --border-color: rgba(15, 23, 42, 0.08);
+}

@@ -1,0 +1,98 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import './variables.css';
+@import './components.css';
+
+/* Font Awesome 图标 */
+@import '@fortawesome/fontawesome-free/css/all.css';
+
+/* Element Plus 主题覆盖 */
+.el-button--primary {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  border-color: transparent;
+}
+
+.el-button--primary:hover,
+.el-button--primary:focus {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  opacity: 0.9;
+}
+
+/* 自定义滚动条样式 */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 229, 255, 0.35) rgba(0, 229, 255, 0.06);
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(0, 229, 255, 0.06);
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, rgba(0, 229, 255, 0.42) 0%, rgba(255, 43, 214, 0.34) 100%);
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, rgba(0, 229, 255, 0.6) 0%, rgba(255, 43, 214, 0.5) 100%);
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:active {
+  background: linear-gradient(135deg, rgba(0, 229, 255, 0.78) 0%, rgba(255, 43, 214, 0.64) 100%);
+}
+
+/* Vue过渡动画 */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.slide-up-enter-active,
+.slide-up-leave-active {
+  transition: all 0.3s ease;
+}
+
+.slide-up-enter-from {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.slide-up-leave-to {
+  opacity: 0;
+  transform: translateY(-30px);
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .glass,
+  .glass-strong {
+    margin: 16px;
+    border-radius: 20px;
+  }
+
+  .stat-card {
+    padding: 16px;
+  }
+
+  .tab-btn {
+    font-size: 14px;
+    padding: 12px 8px;
+  }
+
+  .modal-scroll-content {
+    max-height: calc(85vh - 120px);
+  }
+}
