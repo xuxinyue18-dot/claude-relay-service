@@ -216,7 +216,7 @@ sudo systemctl start redis
 
 ```bash
 # 下载项目
-git clone https://github.com/Wei-Shaw//claude-relay-service.git
+git clone git@github.com:xuxinyue18-dot/claude-relay-service.git
 cd claude-relay-service
 
 # 安装依赖
@@ -240,6 +240,13 @@ ENCRYPTION_KEY=32位的加密密钥随便写
 REDIS_HOST=localhost
 REDIS_PORT=6379
 REDIS_PASSWORD=
+
+# （可选）Gemini OAuth / Antigravity OAuth
+# 如需使用 Gemini OAuth 相关能力请填写（仓库不再内置默认值）
+# GEMINI_OAUTH_CLIENT_ID=
+# GEMINI_OAUTH_CLIENT_SECRET=
+# ANTIGRAVITY_OAUTH_CLIENT_ID=
+# ANTIGRAVITY_OAUTH_CLIENT_SECRET=
 
 ```
 
@@ -323,6 +330,8 @@ docker-compose.yml 已包含：
 - `ADMIN_USERNAME`: 管理员用户名（不设置则自动生成）
 - `ADMIN_PASSWORD`: 管理员密码（不设置则自动生成）
 - `LOG_LEVEL`: 日志级别（默认：info）
+- `GEMINI_OAUTH_CLIENT_ID` / `GEMINI_OAUTH_CLIENT_SECRET`: Gemini CLI OAuth 配置（如需使用 Gemini OAuth 能力时填写，仓库不再内置默认值）
+- `ANTIGRAVITY_OAUTH_CLIENT_ID` / `ANTIGRAVITY_OAUTH_CLIENT_SECRET`: Antigravity OAuth 配置（如需使用 Antigravity OAuth 能力时填写，仓库不再内置默认值）
 - 更多配置项请参考 `.env.example` 文件
 
 ### 管理员凭据获取方式

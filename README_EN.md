@@ -150,7 +150,7 @@ sudo systemctl start redis
 
 ```bash
 # Download project
-git clone https://github.com/Wei-Shaw/claude-relay-service.git
+git clone git@github.com:xuxinyue18-dot/claude-relay-service.git
 cd claude-relay-service
 
 # Install dependencies
@@ -173,6 +173,13 @@ ENCRYPTION_KEY=32-character-encryption-key-write-randomly
 REDIS_HOST=localhost
 REDIS_PORT=6379
 REDIS_PASSWORD=
+
+# (Optional) Gemini OAuth / Antigravity OAuth
+# Set these if you need Gemini OAuth related features; no built-in defaults.
+# GEMINI_OAUTH_CLIENT_ID=
+# GEMINI_OAUTH_CLIENT_SECRET=
+# ANTIGRAVITY_OAUTH_CLIENT_ID=
+# ANTIGRAVITY_OAUTH_CLIENT_SECRET=
 ```
 
 **Edit `config/config.js` file:**
